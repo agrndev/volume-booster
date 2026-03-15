@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume Booster</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Volume number -->
+    <div class="volume-display">
+      <div class="volume-number" id="volNum">100<span class="volume-pct">%</span></div>
+      <div class="volume-label">current boost level</div>
+    </div>
+
+    <!-- Visualizer -->
+    <div class="visualizer" id="visualizer">
+      <!-- bars injected by JS -->
+    </div>
+
+    <!-- Slider -->
+    <div class="slider-wrap">
+      <div class="slider-track">
+        <div class="slider-fill" id="sliderFill"></div>
+        <input type="range" id="volSlider" min="0" max="600" step="5" value="100">
+      </div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+
+    <!-- Presets -->
+    <div class="presets-label">Quick Presets</div>
+    <div class="presets" id="presets">
+      <button class="preset-btn" data-val="50">50%</button>
+      <button class="preset-btn active" data-val="100">100%</button>
+      <button class="preset-btn" data-val="200">200%</button>
+      <button class="preset-btn" data-val="300">300%</button>
+      <button class="preset-btn" data-val="600">MAX</button>
+    </div>
+
+    <!-- Warning banner -->
+    <div class="warn-banner" id="warnBanner">
+      ⚠ High volumes may cause audio clipping or distortion. Protect your hearing.
+    </div>
+
+    <div class="separator"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="status-dot" id="statusDot"></div>
+      <div class="status-text" id="statusText">default</div>
+      <button class="reset-btn" id="resetBtn">Reset</button>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
